@@ -1,0 +1,459 @@
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 5%;
+}
+
+.stats-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    text-align: center;
+    flex: 1;
+    min-width: 180px;
+    border: 1px solid #edf2f7;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 1.8rem;
+    color: #cda252;
+    margin-bottom: 10px;
+}
+
+.stat-number {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #718096;
+    font-weight: 500;
+}
+
+.services-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    margin-bottom: 35px;
+    border: 1px solid #edf2f7;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    color: #1a4d38;
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #cda252;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.services-column {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #4a5568;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 6px 0;
+    transition: color 0.2s ease;
+}
+
+.service-item i {
+    color: #1a4d38;
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.service-item:hover {
+    color: #cda252;
+}
+
+.forms-section {
+    margin-top: 50px;
+}
+
+.section-subtitle {
+    color: #718096;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    margin-top: -15px;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4a5568;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background: #cda252;
+    color: #ffffff;
+    border-color: #cda252;
+}
+
+.forms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.form-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    border: 1px solid #edf2f7;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.form-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.form-card-icon {
+    font-size: 1.6rem;
+    color: #cda252;
+    margin-bottom: 12px;
+}
+
+.form-card h4 {
+    font-size: 0.9rem;
+    color: #2d3748;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.highlight-card {
+    grid-column: span 2;
+    background: #fdfaf4;
+    border: 1px solid #faebd7;
+}
+
+@media (max-width: 600px) {
+    .highlight-card {
+        grid-column: span 1;
+    }
+}
+/* منع اختفاء عناوين الأقسام خلف الـ Navbar الثابت عند التمرير السلس */
+section {
+    scroll-margin-top: 100px;
+}
+
+/* ==========================================
+   4. تنسيقات قسم الاستبيان 
+   ========================================== */
+.survey-box {
+    background: #fcf9f3;
+    border: 1px dashed #cda252;
+    border-radius: 12px;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.survey-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.survey-icon-main {
+    font-size: 2.3rem;
+    color: #cda252;
+}
+
+.survey-text h3 {
+    font-size: 1.1rem;
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+.survey-text p {
+    font-size: 0.85rem;
+    color: #718096;
+}
+
+.date-highlight {
+    color: #e53e3e;
+    font-weight: 600;
+}
+
+.survey-action-btn {
+    background: #1a4d38;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.survey-action-btn:hover {
+    background: #cda252;
+    box-shadow: 0 4px 12px rgba(205, 162, 82, 0.2);
+}
+
+/* ==========================================
+   5. تنسيقات قسم مدونة الأمانة 
+   ========================================== */
+.blog-section-container {
+    margin-top: 50px;
+    margin-bottom: 35px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.blog-card {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    border: 1px solid #edf2f7;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+}
+
+.blog-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ebf8ff;
+    color: #2b6cb0;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.blog-badge.security {
+    background: #fff5f5;
+    color: #c53030;
+}
+
+.blog-badge.event {
+    background: #f0fff4;
+    color: #22543d;
+}
+
+.blog-card-body {
+    padding: 45px 22px 25px 22px;
+}
+
+.blog-date {
+    font-size: 0.8rem;
+    color: #a0aec0;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.blog-card-body h3 {
+    font-size: 1.05rem;
+    color: #2d3748;
+    margin-bottom: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.blog-card-body p {
+    font-size: 0.88rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    text-decoration: none;
+    color: #cda252;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s ease;
+}
+
+.read-more:hover {
+    color: #1a4d38;
+}
+
+/* ==========================================
+   6. تنسيقات قسم عن الأمانة 
+   ========================================== */
+.about-section-container {
+    margin-top: 50px;
+}
+
+.about-content-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.about-text-side .about-lead {
+    font-size: 1.05rem;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.about-features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-feature-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.about-feature-item i {
+    font-size: 1.4rem;
+    color: #cda252;
+    background: #fdfaf4;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #fcf3e3;
+}
+
+.about-feature-item h4 {
+    font-size: 1rem;
+    color: #1a4d38;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.about-feature-item p {
+    font-size: 0.88rem;
+    color: #718096;
+    line-height: 1.5;
+}
+
+.about-stats-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-mini-card {
+    background: #fafafa;
+    border: 1px solid #edf2f7;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-mini-card i {
+    font-size: 1.8rem;
+    color: #1a4d38;
+    margin-bottom: 10px;
+}
+
+.about-mini-card h4 {
+    font-size: 0.95rem;
+    color: #2d3748;
+    margin-bottom: 4px;
+}
+
+.about-mini-card p {
+    font-size: 0.85rem;
+    color: #718096;
+    font-weight: 600;
+}
+
+/* التوافق مع شاشات الجوال */
+@media (max-width: 768px) {
+    .about-content-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .survey-box {
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .survey-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}

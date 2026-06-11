@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}البوابة الداخلية{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="{% static 'images/tabuk-removebg-preview.png' %}" alt="شعار البوابة" class="brand-logo">
+            <h1>البوابة الداخلية</h1>
+        </div>
+        
+        <div class="nav-menu">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#services-section">برامج الأمانة وبلدي</a></li>
+                <li><a href="#">نافذة الأمانة</a></li>
+                <li><a href="#forms-section">النماذج الإلكترونية</a></li>
+                <li><a href="#">الاستبيان</a></li>
+                <li><a href="#">مدونة الأمانة</a></li>
+                <li><a href="#">عن الأمانة</a></li>
+            </ul>
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>جميع الحقوق محفوظة © البوابة الداخلية 2026</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        const links = document.querySelectorAll('.nav-links li a');
+        
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                links.forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
