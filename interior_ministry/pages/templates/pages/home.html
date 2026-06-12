@@ -8,6 +8,21 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+<div class="hero-slider-section">
+        <div class="hero-slide-overlay">
+            <div class="hero-slide-content">
+                <button class="slider-arrow prev-arrow"><i class="fas fa-chevron-right"></i></button>
+                
+                <div class="hero-text-container">
+                    <h2>دليل المستخدم لتفعيل<br>برنامج حاضر للجوال</h2>
+                    <a href="#" class="hero-download-btn">اضغط هنا لتحميل المرفق</a>
+                </div>
+
+                <button class="slider-arrow next-arrow"><i class="fas fa-chevron-left"></i></button>
+            </div>
+        </div>
+    </div>
+
 <div class="container">
     
     <section class="stats-section">
@@ -37,6 +52,13 @@
             <p class="stat-label">عدد الزيارات</p>
         </div>
     </section>
+
+     <div class="dashboard-action-wrapper">
+        <a href="{% url 'dashboard' %}" class="main-dashboard-btn">
+            <i class="fa-solid fa-chart-line"></i>
+            الانتقال إلى لوحة تحكم الموظف
+        </a>
+    </div>
 
     <section id="services-section" class="services-container">
         <h2 class="section-title">برامج و أنظمة الأمانة</h2>

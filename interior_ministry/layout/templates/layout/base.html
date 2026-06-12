@@ -18,13 +18,13 @@
         
         <div class="nav-menu">
             <ul class="nav-links" id="navLinks">
-                <li><a href="#">الرئيسية</a></li>
-                <li><a href="#services-section">برامج الأمانة وبلدي</a></li>
-                <li><a href="#">نافذة الأمانة</a></li>
-                <li><a href="#forms-section">النماذج الإلكترونية</a></li>
-                <li><a href="#">الاستبيان</a></li>
-                <li><a href="#">مدونة الأمانة</a></li>
-                <li><a href="#">عن الأمانة</a></li>
+                <li><a href="{% url 'home' %}">الرئيسية</a></li>
+                <li><a href="{% url 'home' %}#services-section">برامج الأمانة</a></li>
+                <li><a href="{% url 'home' %}#amanah-window">نافذة الأمانة</a></li>
+                <li><a href="{% url 'home' %}#forms-section">النماذج الإلكترونية</a></li>
+                <li><a href="{% url 'home' %}#survey-section">الاستبيان</a></li>
+                <li><a href="{% url 'home' %}#blog-section">مدونة الأمانة</a></li>
+                <li><a href="{% url 'home' %}#about-section">عن الأمانة</a></li>
             </ul>
         </div>
 
@@ -40,9 +40,54 @@
         {% endblock %}
     </main>
 
-    <footer class="footer">
-        <p>جميع الحقوق محفوظة © البوابة الداخلية 2026</p>
-    </footer>
+<footer class="main-footer">
+    <div class="footer-container">
+        
+        <div class="footer-column about-col">
+            <div class="footer-logo-area">
+                <img src="/static/images/tabuk-removebg-preview.png" class="footer-logo" alt="شعار الأمانة">
+                <h3>البوابة الداخلية</h3>
+            </div>
+            <p class="footer-desc">
+                المنصة الرقمية الموحدة لمنسوبي الأمانة، بهدف تسهيل الإجراءات الإدارية، وتقديم الخدمات الإلكترونية الداخلية بكفاءة وجودة عالية.
+            </p>
+        </div>
+
+        <div class="footer-column links-col">
+            <h4>روابط سريعة</h4>
+            <ul class="footer-links-list">
+                <li><a href="{% url 'home' %}">الرئيسية</a></li>
+                <li><a href="{% url 'home' %}#services-section">برامج الأمانة</a></li>
+                <li><a href="{% url 'home' %}#forms-section">النماذج الإلكترونية</a></li>
+                <li><a href="{% url 'home' %}#survey-section">استطلاعات الرأي</a></li>
+                <li><a href="{% url 'dashboard' %}">لوحة التحكم</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column contact-col">
+            <h4>التواصل والدعم الداخلي</h4>
+            <ul class="footer-contact-list">
+                <li><i class="fa-solid fa-phone"></i> <span>التحويلة الداخلية: 312</span></li>
+                <li><i class="fa-solid fa-envelope"></i> <span>it-support@amanah.gov.sa</span></li>
+                <li><i class="fa-solid fa-building"></i> <span>الإدارة العامة لتقنية المعلومات</span></li>
+            </ul>
+        </div>
+
+        <div class="footer-column partners-col">
+            <h4>منصات شريكة</h4>
+            <div class="partners-grid">
+                <span class="partner-tag">منصة بلدي</span>
+                <span class="partner-tag">وزارة البلديات والإسكان</span>
+                <span class="partner-tag">نظام حاضر</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة © الإدارة العامة لتقنية المعلومات والأمن السيبراني 2026</p>
+    </div>
+</footer>
 
     <script>
         function toggleMenu() {
