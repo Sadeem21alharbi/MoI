@@ -17,7 +17,7 @@ body {
 }
 
 .navbar {
-    background-color: #ffffff;
+    background-color: #01533d;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
     padding: 18px 8%;
     display: flex;
@@ -26,6 +26,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+
 }
 
 .nav-brand {
@@ -61,7 +62,7 @@ body {
 
 .nav-links li a {
     text-decoration: none;
-    color: #555555;
+    color: #ffffff;
     font-size: 0.95rem;
     font-weight: 600;
     padding: 8px 4px;
@@ -116,7 +117,7 @@ body {
 
 
 .main-footer {
-    background-color: #113426; 
+    background-color: #01533d; 
     color: #ffffff;
     padding: 60px 0 0 0;
     margin-top: auto; 
@@ -175,7 +176,7 @@ body {
 
 .footer-desc {
     font-size: 0.88rem;
-    color: #cbd5e1;
+    color: #ffffff;
     line-height: 1.6;
 }
 
@@ -188,7 +189,7 @@ body {
 }
 
 .footer-links-list li a {
-    color: #cbd5e1;
+    color: #ffffff;
     text-decoration: none;
     font-size: 0.88rem;
     transition: all 0.2s ease;
@@ -230,6 +231,7 @@ body {
     color: #cbd5e1;
     text-align: center;
     transition: all 0.2s ease;
+    text-decoration: none;
 }
 
 .partner-tag:hover {
@@ -239,7 +241,7 @@ body {
 }
 
 .footer-bottom {
-    background-color: #0b2219; 
+    background-color: #074031; 
     text-align: center;
     padding: 15px 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);

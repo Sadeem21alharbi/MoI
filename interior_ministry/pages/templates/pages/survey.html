@@ -1,0 +1,33 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'pages/css/pages_style.css' %}">
+
+<div class="survey-page">
+    <div class="survey-header">
+        <h1>استبيان قياس رضا المنسوبين</h1>
+        <p>نقدر مشاركتكم في تقييم الخدمات الرقمية. إجاباتكم تساهم في تطوير بيئة عملنا.</p>
+    </div>
+
+    <form class="survey-form">
+        <div class="question-card">
+            <p>1. كيف تقيم سهولة الوصول إلى الخدمات الإلكترونية عبر البوابة؟</p>
+            <br>
+            <div class="options">
+                <label><input type="radio" name="q1" value="5"> ممتاز</label>
+                <label><input type="radio" name="q1" value="4"> جيد جداً</label>
+                <label><input type="radio" name="q1" value="3"> متوسط</label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <p>2. ما مدى فاعلية الخدمات المقدمة في إنجاز مهامك اليومية؟</p>
+            <br>
+            <textarea placeholder="اكتب ملاحظاتك هنا..." rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">إرسال التقييم</button>
+    </form>
+</div>
+{% endblock %}

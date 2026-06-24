@@ -5,20 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}البوابة الداخلية{% endblock %}</title>
-    
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="nav-brand">
-            <img src="{% static 'images/tabuk-removebg-preview.png' %}" alt="شعار البوابة" class="brand-logo">
+            <img src="{% static 'images/Tabuk-city-logo.png' %}" alt="شعار البوابة" class="brand-logo">
             <h1>البوابة الداخلية</h1>
         </div>
         
         <div class="nav-menu">
             <ul class="nav-links" id="navLinks">
-                <li><a href="{% url 'home' %}">الرئيسية</a></li>
+                <li><a href="{% url 'home' %}#home">الرئيسية</a></li>
                 <li><a href="{% url 'home' %}#services-section">برامج الأمانة</a></li>
                 <li><a href="{% url 'home' %}#forms-section">النماذج الإلكترونية</a></li>
                 <li><a href="{% url 'home' %}#survey-section">الاستبيان</a></li>
@@ -44,7 +43,7 @@
         
         <div class="footer-column about-col">
             <div class="footer-logo-area">
-                <img src="/static/images/tabuk-removebg-preview.png" class="footer-logo" alt="شعار الأمانة">
+                <img src="/static/images/Tabuk-city-logo.png" class="footer-logo" alt="شعار الأمانة">
                 <h3>البوابة الداخلية</h3>
             </div>
             <p class="footer-desc">
@@ -55,7 +54,7 @@
         <div class="footer-column links-col">
             <h4>روابط سريعة</h4>
             <ul class="footer-links-list">
-                <li><a href="{% url 'home' %}">الرئيسية</a></li>
+                <li><a href="{% url 'home' %}#home">الرئيسية</a></li>
                 <li><a href="{% url 'home' %}#services-section">برامج الأمانة</a></li>
                 <li><a href="{% url 'home' %}#forms-section">النماذج الإلكترونية</a></li>
                 <li><a href="{% url 'home' %}#survey-section">استطلاعات الرأي</a></li>
@@ -75,9 +74,8 @@
         <div class="footer-column partners-col">
             <h4>منصات شريكة</h4>
             <div class="partners-grid">
-                <span class="partner-tag">منصة بلدي</span>
-                <span class="partner-tag">وزارة البلديات والإسكان</span>
-                <span class="partner-tag">نظام حاضر</span>
+                <a href="https://balady.gov.sa/ar" class="partner-tag">منصة بلدي</a>
+                <a href="https://momah.gov.sa/ar" class="partner-tag">وزارة البلديات والإسكان</a>
             </div>
         </div>
 

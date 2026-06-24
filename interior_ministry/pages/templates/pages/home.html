@@ -8,23 +8,22 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<div class="hero-slider-section">
-        <div class="hero-slide-overlay">
-            <div class="hero-slide-content">
-                <button class="slider-arrow prev-arrow"><i class="fas fa-chevron-right"></i></button>
-                
-                <div class="hero-text-container">
-                    <h2>دليل المستخدم لتفعيل<br>برنامج حاضر للجوال</h2>
-                    <a href="#" class="hero-download-btn">اضغط هنا لتحميل المرفق</a>
-                </div>
+<div id = "home"class="hero-slider-section">
+    <div class="hero-slide-overlay">
+        <div class="hero-slide-content">
+            <button class="slider-arrow prev-arrow" onclick="prevSlide()"><i class="fas fa-chevron-right"></i></button>
 
-                <button class="slider-arrow next-arrow"><i class="fas fa-chevron-left"></i></button>
+            <div class="hero-text-container" id="heroTextContainer">
+                <h2 id="heroTitle">دليل المستخدم لتفعيل<br>برنامج حاضر للجوال</h2>
+                <a href="#" id="heroLink" class="hero-download-btn">اضغط هنا لتحميل المرفق</a>
             </div>
+
+            <button class="slider-arrow next-arrow" onclick="nextSlide()"><i class="fas fa-chevron-left"></i></button>
         </div>
     </div>
-
+</div>
 <div class="container">
-    
+
     <section class="stats-section">
         <div class="stat-card">
             <div class="stat-icon"><i class="fa-solid fa-sitemap"></i></div>
@@ -53,7 +52,7 @@
         </div>
     </section>
 
-     <div class="dashboard-action-wrapper">
+    <div class="dashboard-action-wrapper">
         <a href="{% url 'dashboard' %}" class="main-dashboard-btn">
             <i class="fa-solid fa-chart-line"></i>
             الانتقال إلى لوحة تحكم الموظف
@@ -68,10 +67,13 @@
                 <a href="#" class="service-item"><i class="fa-solid fa-building-columns"></i> نظام الاستثمار</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-user-gear"></i> نظام شؤون الموظفين (القديم)</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-id-card-clip"></i> بوابة الموظف الإلكترونية</a>
-                <a href="#" class="service-item"><i class="fa-solid fa-envelope-open-text"></i> نظام الاتصالات الإدارية</a>
+                <a href="#" class="service-item"><i class="fa-solid fa-envelope-open-text"></i> نظام الاتصالات
+                    الإدارية</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-laptop"></i> نظام رخص المحلات (مدارات)</a>
-                <a href="#" class="service-item"><i class="fa-solid fa-scale-balanced"></i> نظام مكتبة التشريعات والإمتثال</a>
-                <a href="#" class="service-item"><i class="fa-solid fa-lightbulb"></i> منصة الأفكار الإبداعية للموظفين</a>
+                <a href="#" class="service-item"><i class="fa-solid fa-scale-balanced"></i> نظام مكتبة التشريعات
+                    والإمتثال</a>
+                <a href="#" class="service-item"><i class="fa-solid fa-lightbulb"></i> منصة الأفكار الإبداعية
+                    للموظفين</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-folder-tree"></i> نظام إدارة المشاريع المؤسسي</a>
             </div>
             <div class="services-column">
@@ -81,18 +83,22 @@
                 <a href="#" class="service-item"><i class="fa-solid fa-screwdriver-wrench"></i> نظام الدعم الفني</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-box-archive"></i> برنامج الأرشيف</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-building"></i> نظام رخص المباني (مدارات)</a>
-                <a href="#" class="service-item"><i class="fa-solid fa-location-dot"></i> استعلام عن العنوان الوطني للمؤسسات</a>
+                <a href="#" class="service-item"><i class="fa-solid fa-location-dot"></i> استعلام عن العنوان الوطني
+                    للمؤسسات</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-gavel"></i> المنصة القانونية الموحدة</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-tasks"></i> نظام إدارة المهام</a>
             </div>
             <div class="services-column">
-                <a href="#" class="service-item"><i class="fa-solid fa-desktop"></i> نظام عهدة الحاسب الآلي</a><a href="#" class="service-item"><i class="fa-solid fa-compass-drafting"></i> نظام رخص الحفريات</a>
+                <a href="#" class="service-item"><i class="fa-solid fa-desktop"></i> نظام عهدة الحاسب الآلي</a><a
+                    href="#" class="service-item"><i class="fa-solid fa-compass-drafting"></i> نظام رخص الحفريات</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-paper-plane"></i> نظام الرسائل الإلكترونية</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-map-location-dot"></i> نظام منح الأراضي</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-book-bookmark"></i> نظام المراجعة الداخلية</a>
-                <a href="#" class="service-item"><i class="fa-solid fa-file-signature"></i> نظام الإتصالات الإدارية (مدارات)</a>
+                <a href="#" class="service-item"><i class="fa-solid fa-file-signature"></i> نظام الإتصالات الإدارية
+                    (مدارات)</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-heart-pulse"></i> نظام الرقابة الصحية مصادر</a>
-                <a href="#" class="service-item"><i class="fa-solid fa-chart-line"></i> نظام إدارة الأداء الإستراتيجي</a>
+                <a href="#" class="service-item"><i class="fa-solid fa-chart-line"></i> نظام إدارة الأداء
+                    الإستراتيجي</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-shield-halved"></i> منصة أمان</a>
             </div>
         </div>
@@ -107,88 +113,98 @@
                 <a href="#" class="service-item"><i class="fa-solid fa-paste"></i> القرارات المساحية</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-trowel-bricks"></i> الرخص الإنشائية</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-shop"></i> نظام خدمات المتاجر المتنقلة</a>
-                <a href="#" class="service-item"><i class="fa-solid fa-briefcase"></i> بوابة الفرص الاستثمارية - الموظفين</a>
+                <a href="#" class="service-item"><i class="fa-solid fa-briefcase"></i> بوابة الفرص الاستثمارية -
+                    الموظفين</a>
             </div>
             <div class="services-column">
                 <a href="#" class="service-item"><i class="fa-solid fa-store"></i> رخص الأنشطة التجارية</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-helmet-safety"></i> نظام تصاريح الحفريات</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-file-medical"></i> نظام الشهادات الصحية</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-clipboard-check"></i> نظام تقارير بلدي</a>
-                <a href="#" class="service-item"><i class="fa-solid fa-headset"></i> نظام خدمة العملاء ( 940 - التشوه البصري )</a>
+                <a href="#" class="service-item"><i class="fa-solid fa-headset"></i> نظام خدمة العملاء ( 940 - التشوه
+                    البصري )</a>
             </div>
             <div class="services-column">
                 <a href="#" class="service-item"><i class="fa-solid fa-monument"></i> نظام إكرام الموتى</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-users-viewfinder"></i> منصة داعم</a>
-                <a href="#" class="service-item"><i class="fa-solid fa-house-chimney-window"></i> نظام رخص السكن الجماعي</a>
+                <a href="#" class="service-item"><i class="fa-solid fa-house-chimney-window"></i> نظام رخص السكن
+                    الجماعي</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-calendar-days"></i> نظام المواعيد</a>
                 <a href="#" class="service-item"><i class="fa-solid fa-circle-check"></i> منصة ممتثل للرقابة البلدية</a>
             </div>
         </div>
     </section>
-
-    <section id = "forms-section"class="forms-section">
+    <section id="forms-section" class="forms-section">
         <h2 class="section-title">النماذج الإلكترونية</h2>
         <p class="section-subtitle">النماذج الإلكترونية الخاصة بمنسوبي أمانة منطقة تبوك والبلديات التابعة والفرعية.</p>
-        
+
         <div class="filter-tabs">
-            <button class="tab-btn active">الكل</button>
-            <button class="tab-btn">النماذج الإلكترونية</button>
-            <button class="tab-btn">ركن الموارد البشرية</button>
-            <button class="tab-btn">ركن الأمن السيبراني</button>
-            <button class="tab-btn">ركن التعاميم</button>
+            <button class="tab-btn active" onclick="filterForms('all', this)">الكل</button>
+            <button class="tab-btn" onclick="filterForms('electronic', this)">النماذج الإلكترونية</button>
+            <button class="tab-btn" onclick="filterForms('hr', this)">ركن الموارد البشرية</button>
+            <button class="tab-btn" onclick="filterForms('cyber', this)">ركن الأمن السيبراني</button>
+            <button class="tab-btn" onclick="filterForms('circulars', this)">ركن التعاميم</button>
         </div>
 
-        <div class="forms-grid">
-            <div class="form-card highlight-card">
+        <div class="forms-grid" id="formsGrid">
+            <div class="form-card cyber">
                 <div class="form-card-icon"><i class="fa-solid fa-bars"></i></div>
                 <h4>سياسة الحفظ والاتلاف</h4>
             </div>
-            <div class="form-card"><div class="form-card-icon"><i class="fa-solid fa-chart-column"></i></div>
+            <div class="form-card cyber">
+                <div class="form-card-icon"><i class="fa-solid fa-chart-column"></i></div>
                 <h4>نموذج سياسة الاستخدام المقبول للأصول</h4>
             </div>
-            <div class="form-card">
+            <div class="form-card cyber">
                 <div class="form-card-icon"><i class="fa-solid fa-bars"></i></div>
                 <h4>السياسة العامة للأمن السيبراني</h4>
             </div>
-            <div class="form-card">
+
+            <div class="form-card hr">
                 <div class="form-card-icon"><i class="fa-solid fa-pen-nib"></i></div>
                 <h4>الآلية للترقيات بالموارد البشرية</h4>
             </div>
-            <div class="form-card">
+            <div class="form-card hr">
                 <div class="form-card-icon"><i class="fa-solid fa-chart-line"></i></div>
                 <h4>لائحة الأداء الوظيفي</h4>
             </div>
-            <div class="form-card">
+            <div class="form-card hr">
                 <div class="form-card-icon"><i class="fa-solid fa-pen"></i></div>
                 <h4>الشرح المبسط للإدارة الأداء</h4>
             </div>
-            <div class="form-card">
+            <div class="form-card hr">
                 <div class="form-card-icon"><i class="fa-solid fa-bars"></i></div>
                 <h4>دليل الموظف لدورة الأداء</h4>
             </div>
-            <div class="form-card">
+            <div class="form-card electronic">
                 <div class="form-card-icon"><i class="fa-solid fa-calendar-check"></i></div>
                 <h4>تقييم الموظفين</h4>
             </div>
-            <div class="form-card">
+            <div class="form-card hr">
                 <div class="form-card-icon"><i class="fa-solid fa-umbrella"></i></div>
                 <h4>طلب إجازة</h4>
             </div>
-            <div class="form-card">
+            <div class="form-card hr">
                 <div class="form-card-icon"><i class="fa-solid fa-check-double"></i></div>
                 <h4>تقييم وميثاق الأداء للوظائف الإشرافية</h4>
             </div>
-            <div class="form-card">
+            <div class="form-card hr">
                 <div class="form-card-icon"><i class="fa-solid fa-check"></i></div>
                 <h4>تقييم وميثاق الأداء للوظائف الغير الإشرافية</h4>
             </div>
+            <div class ="form-card circulars">
+                <div class="form-card-icon"><i class="fa-solid fa-file-lines"></i></div>
+                <h4>التعاميم الداخلية</h4>
+
+            </div>
         </div>
     </section>
+
     <br>
     <section id="survey-section" class="services-container survey-section">
         <h2 class="section-title">صوتك يهمنا (الاستبيانات الداخليّة)</h2>
         <p class="section-subtitle">نعمل باستمرار على تطوير بيئتنا الرقمية، شاركنا رأيك وتقييمك للخدمات الداخلية.</p>
-        
+
         <div class="survey-box">
             <div class="survey-info">
                 <div class="survey-icon-main"><i class="fa-solid fa-square-poll-vertical"></i></div>
@@ -197,21 +213,22 @@
                     <p>ينتهي التصويت في: <span class="date-highlight">30 يونيو 2026</span></p>
                 </div>
             </div>
-            <a href="#" class="survey-action-btn">بدء الاستبيان <i class="fa-solid fa-arrow-left"></i></a>
+            <a href="{% url 'survey' %}" class="survey-action-btn">بدء الاستبيان <i class="fa-solid fa-arrow-left"></i></a>
         </div>
     </section>
 
     <section id="blog-section" class="blog-section-container">
         <h2 class="section-title">مدونة الأمانة</h2>
         <p class="section-subtitle">تابع أحدث الإعلانات، والتعاميم، والفعاليات الداخلية الخاصة بمنسوبي الأمانة.</p>
-        
+
         <div class="blog-grid">
             <div class="blog-card">
                 <div class="blog-badge">إعلان داخلي</div>
                 <div class="blog-card-body">
                     <span class="blog-date"><i class="fa-regular fa-calendar"></i> 11 يونيو 2026</span>
                     <h3>بدء التسجيل في البرامج التدريبية للربع الثالث</h3>
-                    <p>تعلن إدارة الموارد البشرية عن فتح باب التسجيل في الحزم التدريبية الجديدة لتطوير المهارات الهندسية والإدارية...</p>
+                    <p>تعلن إدارة الموارد البشرية عن فتح باب التسجيل في الحزم التدريبية الجديدة لتطوير المهارات الهندسية
+                        والإدارية...</p>
                     <a href="#" class="read-more">اقرأ المزيد <i class="fa-solid fa-chevron-left"></i></a>
                 </div>
             </div>
@@ -220,7 +237,8 @@
                 <div class="blog-card-body">
                     <span class="blog-date"><i class="fa-regular fa-calendar"></i> 08 يونيو 2026</span>
                     <h3>حملة التوعية الدورية بمخاطر التصيد الإلكتروني</h3>
-                    <p>تهيب إدارة الأمن السيبراني بجميع المنسوبين ضرورة توخي الحذر وعدم الضغط على الروابط المجهولة الواردة للبريد...</p>
+                    <p>تهيب إدارة الأمن السيبراني بجميع المنسوبين ضرورة توخي الحذر وعدم الضغط على الروابط المجهولة
+                        الواردة للبريد...</p>
                     <a href="#" class="read-more">اقرأ المزيد <i class="fa-solid fa-chevron-left"></i></a>
                 </div>
             </div>
@@ -229,7 +247,8 @@
                 <div class="blog-card-body">
                     <span class="blog-date"><i class="fa-regular fa-calendar"></i> 01 يونيو 2026</span>
                     <h3>تغطية حفل تكريم الموظفين المتميزين بالنظام البلدي</h3>
-                    <p>أقامت الأمانة حفلها الدوري لتكريم الكفاءات المتميزة في قطاع التحول الرقمي والامتثال البلدي لجهودهم الاستثنائية...</p>
+                    <p>أقامت الأمانة حفلها الدوري لتكريم الكفاءات المتميزة في قطاع التحول الرقمي والامتثال البلدي
+                        لجهودهم الاستثنائية...</p>
                     <a href="#" class="read-more">اقرأ المزيد <i class="fa-solid fa-chevron-left"></i></a>
                 </div>
             </div>
@@ -240,7 +259,8 @@
         <h2 class="section-title">عن أمانة منطقة تبوك</h2>
         <div class="about-content-grid">
             <div class="about-text-side">
-                <p class="about-lead">تسعى أمانة منطقة تبوك إلى تقديم خدمات بلدية راقية ومستدامة، تساهم في تحقيق جودة الحياة والتحول الرقمي الشامل بمنطقتنا الغالية، متماشية مع رؤية المملكة الطموحة.</p>
+                <p class="about-lead">تسعى أمانة منطقة تبوك إلى تقديم خدمات بلدية راقية ومستدامة، تساهم في تحقيق جودة
+                    الحياة والتحول الرقمي الشامل بمنطقتنا الغالية، متماشية مع رؤية المملكة الطموحة.</p>
                 <div class="about-features">
                     <div class="about-feature-item">
                         <i class="fa-solid fa-eye"></i>
@@ -282,5 +302,51 @@
             tab.classList.add('active');
         });
     });
+    function filterForms(category, btn) {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const cards = document.querySelectorAll('.form-card');
+        cards.forEach(card => {
+            if (category === 'all' || card.classList.contains(category)) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+    const slides = [
+    { title: "دليل المستخدم لتفعيل<br>برنامج حاضر للجوال", link: "تحميل المرفق 1" },
+    { title: "دليل التعامل مع<br>نظام الموارد البشرية", link: "تحميل الدليل الإرشادي" },
+    { title: "السياسة الأمنية المحدثة<br>للبوابة الإلكترونية", link: "استعراض السياسة" },
+    { title: "خطوات التقديم على<br>الإجازات والمهام الرسمية", link: "تحميل النماذج" }
+];
+
+    let currentIndex = 0;
+
+    function updateSlide() {
+        const title = document.getElementById('heroTitle');
+        const link = document.getElementById('heroLink');
+        
+        document.getElementById('heroTextContainer').style.opacity = 0;
+        
+        setTimeout(() => {
+            title.innerHTML = slides[currentIndex].title;
+            link.innerText = slides[currentIndex].link;
+            document.getElementById('heroTextContainer').style.opacity = 1;
+        }, 200);
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlide();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlide();
+    }
+
+    setInterval(nextSlide, 4000);
 </script>
 {% endblock %}
